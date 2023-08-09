@@ -154,9 +154,69 @@ Se pasa en el argumento como referencia (sin parentesis).
 function saludoALosPokemones(){
     return "Yo te elijo";
 }
+function saludoSquirtle(){
+return "vamos a calmano";
+}
 
 function eligiendoPokebola(saludo){
     console.log("Hola estas en la liga pokemon");
     console.log("Elige a tu mejor pokemon");
     console.log(saludo());
 }
+//eligiendoPokebola(saludoALosPokemones());
+//eligiendoPokebola("yo te elijo");
+//eligiendoPokebola(saludoALosPokemones);
+//eligiendoPokebola(nombre => 'quiiiiiii soy ${nombre}' , "charizard");
+
+// ----------- resolviendo con ciclos anidados ----------
+function cursosEnComun(student1Courses, student2Courses){
+    const commonCourses = []; // Guardar los cursos en comun 
+
+    for(let i = 0; i < student1Courses.length; i++){
+        for(let j = 0; j < student1Courses.length; j++){
+            if (student1Courses[i] === student2Courses[j]){
+                commonCourses.push(student1Courses[i]);
+            }
+        }
+    }
+return `Cursos en común ${commonCourses}`
+}
+console.log(cursosEnComun(student1Courses, student2Courses));
+
+
+// ------------ Bienvenido con filter e include -------------
+function getCommonCoursesWithFilter(student1Courses, student2Courses){
+    return student1Courses.filter(course=> student2Courses.includes(course));
+}
+console.log(`Cursos en comun usando filter: ${getCommonCoursesWithFilter(student1Courses, student2Courses)}`)
+
+//--------------- Resolviendo con filter e include por partes ----------------------
+
+function getCoursesWithFilter( array1Courses, array2Courses ){
+    const commonCourses = array1Courses.filter(  );
+    return commonCourses;
+}
+console.log(`Comúnxpartes: ${getCoursesWithFilter( student1Courses, student2Courses )}`);
+
+
+
+
+
+// -------- contar la cantidad de caracteres de una frase -----------
+/*
+"Pepe pecas pica papas con un pico y una pala con un pico pica papas pepe pecas";
+mostrar la cantidad de letras `p`.
+Usar funciones flecha. 
+recomendaciones de métodos: split, filter
+*/
+
+
+function factorialConCicloFor(numero){
+    let factorial = 1;
+        for(let i = 1; i <= numero; i++){
+            resultado *= i;
+        }
+    return resultado;
+    }
+    console.log(`El factorial es 5 de: ${factorialConCicloFor(5)}`);
+    

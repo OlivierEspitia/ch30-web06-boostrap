@@ -159,3 +159,33 @@ console.log( "Boolean(' '): " + Boolean(" ")  ); // true
 // [] -> "" , [12,2] -> "12,2", function(){} -> "funtion(){}", {} -> [object, object]
 
 console.log ( String( JSON.stringify( {name:"sergio"}) ));
+
+
+
+// -------------- Recursividad ---------------
+/*
+
+Una función en algoritmos y soluciones que se basan en la divisiñon y conquista
+como cálculos matemáticos de estructura de datos y algoritmos de búsqueda y ordenamientos.
+
+patron: 
+function nombreFuncionRecursiva( parametro){
+    if(condicionParo){
+        return Expresión;
+    }
+else{
+    //llamada recursiova
+    nombreFuncion(nuevoParametro);
+}
+}
+*/
+// ----------Calcula del factorial de un numero usando ciclo for -----------
+
+function factorialConCicloFor(numero){
+let factorial = 1;
+    for(let i = 1; i <= numero; 1++){
+        factorial *= i;
+    }
+return factorial;
+}
+console.log(`El factorial es 5 de: ${factorialConCicloFor(5)}`);
